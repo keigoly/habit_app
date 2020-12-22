@@ -1,0 +1,16 @@
+<% if @users.length != 0 %>
+  <% @users.each do |user| %>
+    <li id = <%= "user-#{user.id}" %>>
+      <%= react_component("User", { user_image: attached_image(user),
+                                    user_name: user.name,
+                                    user_path: user_path(user),
+                                    user_introduction: user.introduction,
+                                    relationship_path: relationship_path(user),
+                                    follow: current_user.following?(user),
+                                    current_user: current_user?(user),
+                                    token: create_authenticity_token }) %>
+    </li>
+  <% end %>
+<% else %>
+  <h3>対象ユーザは存在しません</h3>
+<% end %>

@@ -1,0 +1,23 @@
+<% if object.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+      <% if yield(:title) == "アカウント作成" %>
+        <% user_error_messages(object.errors.full_messages).each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      <% elsif yield(:title) == current_user.name %>
+        <% user_error_messages(object.errors.full_messages).each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      <% elsif !@group.nil? && yield(:title) == @group.name %>
+        <% group_error_messages(object.errors.full_messages).each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      <% else %>
+        <% object.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

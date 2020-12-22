@@ -1,0 +1,26 @@
+<div class="row form">
+
+  <%= form_with(model: @group, local: true) do |f| %>
+
+    <%= hidden_field_tag :edit_element, "group" %>
+
+    <div class="col-md-8 col-md-offset-2">
+      <h3><%= yield(:page_name) %></h3>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name, "コミュニティ名を入力してください" %>
+      <%= f.text_field :name, class: "form-controll" %>
+
+      <%= f.label :habit, "仲間と継続したい習慣を入力してください" %>
+      <%= f.text_field :habit, class: "form-controll" %>
+
+      <%= f.label :overview, "コミュニティの概要を入力してください" %>
+      <%= f.text_area :overview, class: "form-controll" %>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3 submit">
+      <%= f.submit yield(:submit_name), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+</div>

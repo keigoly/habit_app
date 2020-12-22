@@ -1,0 +1,675 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada');
+
+
+/* body */
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+#main{
+  margin-top: 50px;
+}
+ul,li{
+  list-style: none;
+}
+.ReactModal__Body--open {
+  position: fixed;
+  width: 100%;
+  .glyphicon-remove-circle{
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+.card{
+  text-align: center;
+  padding-bottom: 20px;
+  background-color: #b9ffe2;
+  border-radius: 10%;
+  border: 1px solid #6bc1e6;
+  box-shadow: 0 0 8px rgb(155, 154, 154);
+  img{
+    background-color: #ffeeb6;
+    width: 50%;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50%;
+  }
+  h4{
+    font-weight: bold;
+  }
+}
+
+.user-image{
+  text-align: center;
+}
+
+.list{
+  display: inline-block;
+  text-align: left;
+}
+
+/* header */
+header{
+  .navbar-collapse{
+    padding: 0px;
+  }
+  .navbar-toggle{
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .container{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  a{
+    padding: 10px 10px;
+  }
+  a:hover{
+    cursor: pointer;
+  }
+  .user{
+    .dropdown-toggle{
+      height: 40px;
+      padding-left: 5px;
+      padding-right: 10px;
+      .caret{
+        margin-left: 35px;
+      }
+    }
+    img{
+      position: absolute;
+      top: 5px;
+      background-color: white;
+      border-radius: 50%;
+    }
+    .dropdown-menu{
+      left: auto;
+      right: 0;
+      &::before {left:auto !important; right:9px;}
+      &::after {left:auto !important; right:10px;}
+    }
+  }
+  .bell{
+    background-color: white;
+    border-radius: 10%;
+    margin-top: 7px;
+    margin-right: 5px;
+    a{
+      padding: 3px;
+      color: black;
+      .glyphicon-bell{
+        color: rgb(124, 204, 44);
+      }
+    }
+  }
+}
+
+/* footer */
+footer{
+  clear: both;
+  border-top: 1px solid #bbbbbb;
+  margin-top: 100px;
+  padding-top: 5px;
+  ul{
+    float: right;
+    a{
+      font-size: small;
+    }
+    a:hover{
+      cursor: pointer;
+    }
+  }
+  img{
+    position: absolute;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+}
+
+/* ホーム */
+.introduction{
+  height: 450px;
+  width: 100%;
+  margin-left: auto;
+  margin-bottom: 50px;
+  background-image: url("background.jpg");
+  background-size: 100% 100%;
+  text-align: center;
+  img{
+    margin-top: 80px;
+  }
+  h4{
+    font-weight: bold;
+  }
+}
+
+.content{
+  h2{
+    text-align: center;
+    font-weight: bold;
+  }
+  .start-button{
+    text-align: center;
+    margin-top: 30px;
+    button{
+      width: 200px;
+    }
+  }
+  .about{
+    background-color: #eaf7ff;
+    background-image: url("about.jpg");
+    background-color:rgba(255, 253, 253, 0.950);
+    background-blend-mode:lighten;
+    border: 1px solid #dadada;
+    text-align: center;
+    margin-top: 80px;
+    h2{
+      margin-bottom: 40px;
+    }
+    p{
+      font-size: medium;
+      font-weight: bold;
+    }
+  }
+  .step-content{
+    margin-top: 80px;
+  }
+  .cards{
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #bbb;
+    .card{
+      margin-bottom:10px;
+    }
+  }
+}
+
+/* デバッグ */
+.debug_dump{
+  margin-top: 45px;
+  clear: both;
+}
+
+/* フォーム */
+input, textarea{
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form{
+  h2{
+    margin-bottom: 30px;
+  }
+  .submit{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-align: center;
+    button{
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}
+
+/* サインアップ・ログイン */
+.login{
+  .word{
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+}
+
+.signup{
+  .word{
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .card{
+    width: 420px;
+  }
+}
+
+/* ユーザ情報 */
+.profile{
+  margin-top: 20px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 10px 5px;
+  text-align: center;
+  background-color: #faffff;
+  .user-info{
+    img{
+      margin: 20px 20px 5px 20px;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  ul{
+    margin: 0;
+    padding: 10px 0;
+    a{
+      text-decoration: none;
+    }
+    li{
+      padding: 3px;
+    }
+    li:hover{
+      background-color: rgb(148, 227, 253);
+      border-radius: 5%;
+    }
+    .selected{
+      color: rgb(98, 0, 255);
+    }
+  }
+  .submit{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.image-preview{
+  box-shadow: 3px 3px 3px rgb(235, 235, 235);
+  background-color: #faffff;
+  img{
+    margin: 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.user-profile, .group{
+  margin-top: 20px;
+  .title{
+    clear: both;
+  }
+}
+
+/* 一覧情報 */
+.index{
+  h2{
+    margin-bottom: 20px;
+  }
+  .item{
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 3px rgb(235, 235, 235);
+    background-color: #faffff;
+    padding: 10px 20px;
+    span{
+      padding: 0px;
+      margin-top: 10px;
+    }
+    .item-info{
+      text-align: center;
+      img{
+        margin: 20px;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        padding: 0px;
+      }
+      h4{
+        margin-top: 20px
+      }
+    }
+  }
+}
+
+/* 削除 */
+.delete{
+  margin-top: 20px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 10px 5px;
+  text-align: center;
+  box-shadow: 3px 3px 3px rgb(235, 235, 235);
+  background-color: #faffff;
+  .btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* マイクロポスト */
+.micropost{
+  margin: 0 10px 20px 10px;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgb(235, 235, 235);
+  background-color: #faffff;
+  .micropost-user{
+    display: flex;
+    img{
+      margin: 20px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+    .remove{
+      margin-left: auto;
+    }
+    .micropost-time{
+      display: flex;
+      a:hover{
+        cursor: pointer;
+      }
+      .like{
+        margin-left: 10px;
+        color: red;
+      }
+      .unlike{
+        margin-left: 10px;
+        color: rgb(192, 192, 192);
+      }
+    }
+  }
+  .micropost-content{
+    font-size: 15px;
+    margin: 0 10px 0px 10px;
+    p{
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+}
+
+/* グループ・ユーザ紹介 */
+.describe{
+  margin: 20px 0 40px 0;
+  background-color: #faffff;
+  .head{
+    background-color: rgb(255, 243, 228);
+    border-radius: 10px;
+    padding: 30px;
+    span{
+      padding: 0px;
+    }
+    .menu{
+      text-align: center;
+      margin: 10px 0 10px 0;
+      img{
+        margin: 20px;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+      .edit{
+        margin-top: 10px;
+      }
+    }
+  }
+  .body{
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    background-color: #fbfdff;
+    padding: 20px;
+    margin-top: 60px;
+  }
+}
+
+/* 達成ボタン */
+.achievement{
+  text-align: center;
+  button{
+    margin-top: 10px
+  }
+  a{
+    padding: 0px;
+  }
+}
+
+/* フォローボタン */
+.follow{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* メッセージボタン */
+.follow{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* 参加ボタン */
+.send-message{
+  margin-top: 10px;
+}
+
+/* メッセージ機能 */
+.message{
+  margin-top: 20px;
+  p{
+    margin: 0px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .message-history{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 500px;
+    padding: 10px 20px 10px 10px
+  }
+  button{
+    float: right;
+  }
+  .myself{
+    margin-bottom: 15px;
+  }
+  .myself-message{
+    position: relative;
+    padding: 5px;
+    background-color: #06ffff;
+    border: 1px solid #06ffff;
+    border-radius: 10px;
+  }
+  .myself-message::before {
+    content: "";
+    position: absolute;
+    border: 12px solid transparent;
+    border-left: 12px solid #06ffff;
+    top: 10%;
+    left: 100%;
+  }
+  .yourself{
+    margin-bottom: 15px;
+  }
+  .yourself-message{
+    position: relative;
+    padding: 5px;
+    background-color: #06ffff;
+    border: 1px solid #06ffff;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+  .yourself-message::before {
+    content: "";
+    position: absolute;
+    border: 12px solid transparent;
+    border-right: 12px solid #06ffff;
+    top: 10%;
+    left: -24px;
+  }
+  .user-info{
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .time{
+    margin-left: auto;
+    font-size: xx-small;
+  }
+  img{
+    border-radius: 50%;
+    width: 60%;
+  }
+}
+
+.message-list{
+  margin-top: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 500px;
+  .message{
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(235, 235, 235);
+    background-color: #faffff;
+    padding: 10px;
+    margin-right: 20px;
+    position: relative;
+    :hover{
+      opacity: 0.3;
+      background-color: rgb(203, 238, 255);
+    }
+    a{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .message-sender{
+      span{
+        padding: 0;
+        margin: 0;
+        float: right;
+      }
+    }
+    .message-user{
+      clear: both;
+      display: flex;
+      img{
+        margin: 20px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .message-content{
+      font-size: 15px;
+      margin: 0 10px 10px 10px;
+      p{
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+/* 煽り機能 */
+.encouragement{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  textarea{
+    margin-bottom: 5px;
+  }
+  p{
+    margin: 0px;
+    color: red;
+    font-size: 12px;
+  }
+  button{
+    float: right;
+  }
+}
+
+.encouragement-micropost{
+  background-color: rgb(255, 243, 220);
+}
+
+.glyphicon-fire{
+  color: red;
+}
+
+/* タイムライン表示 */
+.timeline-information{
+  margin-top: 20px;
+  text-align: center;
+  .alert{
+    padding: 3px;
+  }
+  h3{
+    margin-top: 10px;
+  }
+  a:hover{
+    cursor: pointer;
+  }
+}
+
+/* 検索 */
+.search{
+  margin-bottom: 10px;
+}
+
+/* いいね一覧 */
+.likers{
+  margin-top: 20px;
+}
+
+/* カレンダー */
+.calendar{
+  text-align: center;
+  h5{
+    margin-bottom: 2px;
+  }
+  .react-calendar{
+    margin: auto;
+    padding: 0 5px 5px 5px;
+    .zero{
+      color: black;
+      background-color: white;
+    }
+    .row{
+      background-color: aqua;
+    }
+    .middle{
+      background-color: palegoldenrod;
+    }
+    .high{
+      background-color: orange;
+    }
+    .react-calendar__tile{
+      border-radius: 50%;
+    }
+  }
+}
+
+/* お問い合わせ */
+.contact{
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+}
+
+.contact-submit{
+  margin-bottom: 30px;
+}
+
+/* お知らせ */
+.notification{
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgb(235, 235, 235);
+  background-color: #fdff89;
+  padding: 10px;
+  margin-bottom: 20px;
+  .information{
+    font-weight: bold;
+    font-size: large;
+    .time{
+      font-size: xx-small;
+    }
+  }
+}
+
